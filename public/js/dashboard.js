@@ -25,7 +25,7 @@ const newPostHandler = async (event) => {
   // This handles the comment post deletion if the user wishes to delete a comment.
   const delButtonHandler = async (event) => {
     // Find the data-id class on the handlebar
-    if (event.target.hasAttribute('data-id') && event.target.getAttribute('id') == "delete") {
+    if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
       // Respond by fetching the api/posts/id route and delete it.
       const response = await fetch(`/api/posts/${id}`, {
@@ -37,21 +37,6 @@ const newPostHandler = async (event) => {
       } else {
         // This failure message is if an error occurs.
         alert('Failed to delete post');
-      }
-    }else if(event.target.hasAttribute('data-id') && event.target.getAttribute('id') == "update"){
-      const id = event.target.getAttribute('data-id');
-      const response = await fetch(`/update/${id}`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-  
-      if (response.ok) {
-        console.log(response);
-        console.log(typeof response);
-      } else {
-        alert('Failed to find existing post');
       }
     }
   };
