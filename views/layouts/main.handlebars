@@ -15,7 +15,6 @@
   <div class="nav bar">
     <a href="/">Home</a>
     <a href="/dashboard">Dashboard</a>
-    <a href="/logout">Logout</a>
   </div>
   
 
@@ -25,7 +24,6 @@
       <nav>
         <!-- The login and logout links are visible/invisible by conditions. -->
         {{#if logged_in}}
-        <a href="/dashboard">dashboard</a> |
         <button class="no-button" id="logout">logout</button>
         {{else}}
         <a href="/login">login</a>
