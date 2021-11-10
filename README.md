@@ -14,4 +14,4 @@ doing. I learned how to integrate sequelize and express with handlebars as well.
 
 **What's the current webpage look like?** <BR />
 
-![Matt Burke's Budget Tracker](.//matts-tech-blog.PNG)
+![Matt Burke's Tech Blog](.//matts-tech-blog.PNG)
